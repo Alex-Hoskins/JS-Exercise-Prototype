@@ -99,19 +99,7 @@ function Baby(name,age,favoriteToy) {
  this.favoriteToy=favoriteToy
 }
 
-Baby.prototype.eat= function(someFood){
-  if(this.stomach.length < 10){
-    this.stomach.push(someFood)
-  }
-}
-
-Baby.prototype.poop=function(){
-  this.stomach=[]
-}
-
-Baby.prototype.toString=function(){
-  return `${this.name},${this.age}`
-}
+Baby.prototype = Object.create(Person.prototype);
 
 Baby.prototype.play=function(favoriteToy){
   return `Playing with ${this.favoriteToy}`
@@ -124,7 +112,7 @@ Baby.prototype.play=function(favoriteToy){
   1. If the function is contained on the global scope "this" will refer to the window object.
   2. Implicit binding is when functions are invoked dot notation. Also, the most common occurance.
   3. Explicit binding is when the this is explicitly expressed. Passing arguments using .call() is an example.
-  4. You can use constructor functions to specifically define this. This gives specific instances and context to this.
+  4. You can use constructor functions to specifically define this. This gives specific instances and context to 
 */
 
 
