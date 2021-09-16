@@ -87,6 +87,8 @@ function Car(model,milesPerGallon) {
 Car.prototype.fill = function(gallons){
   this.tank= this.tank + gallons;
 }
+
+
 /*
   TASK 3
     - Write a Baby constructor subclassing Person.
@@ -112,7 +114,7 @@ Baby.prototype.play=function(favoriteToy){
   1. If the function is contained on the global scope "this" will refer to the window object.
   2. Implicit binding is when functions are invoked dot notation. Also, the most common occurance.
   3. Explicit binding is when the this is explicitly expressed. Passing arguments using .call() is an example.
-  4. You can use constructor functions to specifically define this. This gives specific instances and context to 
+  4. New binding. You can use constructor to create an object and this will refer to that new object.
 */
 
 
